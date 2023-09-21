@@ -3,6 +3,9 @@ let firstColor = document.querySelector('#grey');
 color[0] = firstColor;
 for (let i = 0; color[i] != null; i++) {
   color[i + 1] = color[i].nextElementSibling;
+  if (color[i + 1] == null) {
+    color.pop();
+  }
 }
 console.log(color);
 color.forEach((element) => {
