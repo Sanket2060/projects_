@@ -5,7 +5,7 @@ let calculate = document.querySelector('button');
 console.log(calculate);
 let resulttext;
 calculate.addEventListener('click', (e) => {
-  console.log('helo');
+  //button ma onclick rakhna vanda form ma submit event rakhna thik
   height = parseInt(heightdiv.value);
   weight = parseInt(weightdiv.value);
   let bmi = weight / ((height / 100) * (height / 100));

@@ -11,7 +11,7 @@ subt.addEventListener('click', () => {
     let guessValue = guessField.value;
     let previousGuess = guessValue;
     if (resultValue == guessValue) {
-      correct.innerHTML("Congrats");
+      correct.innerHTML="Congrats";
       break;
     }
     remainingGuess--;
