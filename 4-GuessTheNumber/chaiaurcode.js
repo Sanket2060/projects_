@@ -1,3 +1,5 @@
+// Try modular coding.Use functions to do the task.Stop sphagetti code.
+
 let guessField = document.querySelector('#guessField');
 let subt = document.querySelector('#subt');
 let correct = document.querySelector('.correct');
@@ -15,7 +17,7 @@ function operation(e) {
   if (remainingGuess > 0) {
     e.preventDefault();
     guessValue = guessField.value;
-    if (guessValue == ' ') {
+    if (true == isNaN(guessValue)) {
       console.log('Please enter a number'); //Premade ui vayera console ma print gareko
       console.log(guessValue);
     } else {
@@ -24,22 +26,20 @@ function operation(e) {
       } else if (guessValue > resultValue) {
         correct.innerHTML = 'Incorrect.Try again';
         remainingGuess--;
-        guessRemainingelem.innerHTML = +`${remainingGuess}`;
+        guessRemainingelem.innerHTML += `${remainingGuess}`;
         lowOrHi.innerHTML = 'Try lower';
       } else {
         correct.innerHTML = 'Incorrect.Try again';
         remainingGuess--;
-        guessRemainingelem.innerHTML = +`${remainingGuess}`;
+        guessRemainingelem.innerHTML += `${remainingGuess}`;
         lowOrHi.innerHTML = 'Try higher';
       }
     }
   } else {
     e.preventDefault();
-    correct.innerHTML = 'Game over.0 chances left.Reload to replay.';
+    correct.innerHTML = `Game over.0 chances left.Your number was ${resultValue}.Reload to replay.`;
   }
   let prevguessvalue = guessValue;
   prevguess.innerHTML = `${prevguessvalue}`;
   guessField.value = ' ';
 }
-
-//10 times wrong value ayo vane Game over.0 chances left vanxa tara tespaxi program
